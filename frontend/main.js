@@ -1,7 +1,16 @@
-//console.log('Hello World!');
-// console.log(document.getElementsByName('field1'));
-
 let loginForm = document.getElementById("expenses");
+
+window.addEventListener("DOMContentLoaded", () => {
+    axios.get("http:localhost:5000/get-expenses")
+        .then((resp) => {
+            console.log(resp);
+            for (let i =0; i<resp.data.allExpenses.length; i++){
+                addUser(resp.data.allExpenses[i]);
+            }
+        })
+        .catch((err) => console.log(err))
+});
+
 function save(event) {
     
     event.preventDefault();
