@@ -11,21 +11,22 @@
     <form onsubmit="save(event)" id="expenses">
         
             <label>Expended on<span class="required">*</span></label>
-                <input type="text" id="expendedon" name="expendedon" />
+                <input type="text" id="expendedon" name="expendedon" /><br>
             <label>Amount <span class="required">*</span></label>
-                <input type="number" id="amount" name="amount" /></li>
+                <input type="number" id="amount" name="amount" /></li><br>
             <label>Category</label>
                 <select id="category" name="category" class="field-select">
                 <option value="Entertainment">Entertainment</option>
                 <option value="Work-related">Work-related</option>
                 <option value="Miscellaneous">Miscellaneous</option>
-                </select>
+                </select><br>
             <input type="submit" value="Submit" />
             
     </form>
     <ul id="expenses_list">
                 
     </ul>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
     <script src = "main.js"></script>
   </body>
 </html>
